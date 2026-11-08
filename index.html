@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101522">
+  <title>TALK AI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">T</div><span>TALK <b>AI</b></span></div>
+      <button class="new-chat" id="newChat">＋ New chat</button>
+      <div class="side-label">YOUR SPACE</div>
+      <button class="side-link active" id="chatNav">◈ <span>AI Chat</span></button>
+      <button class="side-link" id="imageNav">▧ <span>Create image</span></button>
+      <button class="side-link" id="historyNav">◷ <span>Chat history</span></button>
+      <div class="sidebar-bottom">
+        <div class="au-pill"><span class="pulse"></span><div><b>A.U. system</b><small>Improvement assistant</small></div></div>
+        <div class="user-mini"><div class="avatar">T</div><div><b>TALK AI</b><small>Personal workspace</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="mobile-brand">TALK <b>AI</b></div>
+        <div class="top-spacer"></div>
+        <span class="status"><i></i> AI workspace</span>
+      </header>
+
+      <section class="chat-view" id="chatView">
+        <div class="welcome" id="welcome">
+          <div class="welcome-orb">✦</div>
+          <p class="eyebrow">YOUR IDEAS, IN MOTION</p>
+          <h1>What can we <span>talk about?</span></h1>
+          <p class="welcome-sub">Ask a question, explore an idea, or build something new.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain a difficult school topic step by step."><b>▤</b><span><strong>Learn something</strong><small>Understand a topic clearly</small></span></button>
+            <button class="suggestion" data-prompt="Help me plan and build a website."><b>⌘</b><span><strong>Build a project</strong><small>Turn an idea into a plan</small></span></button>
+            <button class="suggestion" data-prompt="Give me creative ideas for a poster design."><b>✧</b><span><strong>Get creative</strong><small>Explore fresh ideas</small></span></button>
+            <button class="suggestion" data-prompt="Help me write and debug some JavaScript."><b>〈〉</b><span><strong>Write code</strong><small>Learn and solve problems</small></span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <section class="image-view hidden" id="imageView">
+        <div class="image-heading"><span class="eyebrow">TALK AI CREATIVE STUDIO</span><h1>Imagine it. <span>Create it.</span></h1><p>Describe an original image you would like to create.</p></div>
+        <textarea id="imagePrompt" class="image-prompt" placeholder="A beautiful futuristic city at sunset..."></textarea>
+        <button class="primary-btn" id="createImage">✦ Create image</button>
+        <div id="imageResult" class="image-result"></div>
+      </section>
+
+      <section class="composer-wrap" id="composerWrap">
+        <form class="composer" id="chatForm">
+          <label class="attach-btn" for="fileInput" title="Attach an image or text file">＋</label>
+          <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp,.txt,.json,.js" hidden>
+          <input id="messageInput" type="text" autocomplete="off" placeholder="Message TALK AI..." aria-label="Message TALK AI">
+          <label class="web-toggle"><input type="checkbox" id="webSearch"> <span>Web</span></label>
+          <button class="send-btn" id="sendBtn" type="submit" aria-label="Send message">↑</button>
+        </form>
+        <div class="file-name" id="fileName"></div>
+        <p class="disclaimer">TALK AI can make mistakes. Check important information.</p>
+      </section>
+    </main>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
